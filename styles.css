@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    background: #f9f6f1 url('https://www.transparenttextures.com/patterns/aged-paper.png');
+    color: #3e2f1c;
+  }
+  
+  header {
+    background: url('backgroundim.png') center/cover no-repeat;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  }
+  
+  header button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #c19a6b;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  header button:hover {
+    background-color: #a47c53;
+  }
+  
+  nav {
+    position: sticky;
+    top: 0;
+    background-color: #3e2f1c;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .civilization-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .civilization-card {
+    background: #fff8dc;
+    border: 2px solid #a47c53;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  
+  .civilization-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .civilization-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .civilization-card h3 {
+    margin: 10px;
+  }
+  
+  .timeline {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px;
+  }
+  
+  .timeline-event {
+    min-width: 200px;
+    margin-right: 20px;
+    padding: 10px;
+    background: #e3d5b8;
+    border-left: 4px solid #a47c53;
+  }
+  
+  footer {
+    background-color: #3e2f1c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  

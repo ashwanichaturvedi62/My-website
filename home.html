@@ -1,0 +1,98 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ancient Civilizations Explorer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Ancient Civilizations Explorer</h1>
+    <button onclick="document.getElementById('civilizations').scrollIntoView({ behavior: 'smooth' })">Start Exploring</button>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#civilizations">Civilizations</a>
+    <a href="#timeline">Timeline</a>
+    <a href="tourism.html">Tourism</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <section id="civilizations">
+    <h2>Explore Civilizations</h2>
+    <div class="civilization-grid">
+      <div class="civilization-card">
+        <a href="egypt.html">
+          <img src="egy.png" alt="Egypt" />
+        </a>
+       
+        <h3>Ancient Egypt</h3>
+        <p>Pyramids, Pharaohs, and the Nile.</p>
+      </div>
+      <div class="civilization-card">
+        <a href="mesopotamia.html">
+        <img src="WhatsApp Image 2025-04-28 at 22.35.48_2e8e59aa.jpg" alt="Mesopotamia" /></a>
+        
+        <h3>Mesopotamia</h3>
+        <p>The cradle of civilization.</p>
+      </div>
+      <div class="civilization-card">
+        <a href="indus-valley.html">
+        <img src="indushomesbath.jpg" alt="Indus Valley" /></a>
+        <h3>Indus Valley</h3>
+        <p>Urban planning and undeciphered script.</p>
+      </div>
+      <div class="civilization-card">
+        <a href="china.html">
+        <img src="chinacivi.jpeg" alt="Ancient China" /></a>
+        <h3>Ancient China</h3>
+        <p>Dynasties, inventions, and the Great Wall.</p>
+      </div>
+      <div class="civilization-card">
+        <a href="maya.html">
+        <img src="maya.jpg" alt="Maya" /></a>
+        <h3>Maya</h3>
+        <p>Calendars, temples, and astronomy.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="timeline">
+    <h2>Historical Timeline</h2>
+    <div class="timeline">
+      <div class="timeline-event">
+        <strong>3500 BCE</strong><br />Mesopotamia begins
+      </div>
+      <div class="timeline-event">
+        <strong>3100 BCE</strong><br />Unification of Egypt
+      </div>
+      <div class="timeline-event">
+        <strong>2600 BCE</strong><br />Indus Valley peak
+      </div>
+      <div class="timeline-event">
+        <strong>1600 BCE</strong><br />Shang Dynasty in China
+      </div>
+      <div class="timeline-event">
+        <strong>2000 BCE</strong><br />Maya civilization starts
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About This Project</h2>
+    <p>This project was created to explore the fascinating achievements of ancient civilizations. From monumental architecture to early writing systems, these cultures laid the foundation for the modern world.</p>
+    <p><strong>Sources:</strong> Wikipedia, History.com, National Geographic</p>
+    <p><strong>Created by:</strong> Your Name Here</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Ancient Civilizations Explorer | Follow us @HistoryNerds
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

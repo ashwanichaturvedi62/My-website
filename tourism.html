@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Historical Tourism - Ancient Civilizations</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 5% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .modal-content input,
+    .modal-content select,
+    .modal-content button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+    }
+
+    .close {
+      float: right;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Explore Ancient Civilizations Through Tourism</h1>
+    <p>Plan your historical journey with curated travel experiences.</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#egypt">Egypt</a>
+    <a href="#mesopotamia">Mesopotamia</a>
+    <a href="#indus">Indus Valley</a>
+    <a href="#china">Ancient China</a>
+    <a href="#maya">Maya</a>
+  </nav>
+
+  <main>
+    <!-- Tour Sections -->
+    <section id="egypt" class="tour-section">
+      <h2>🏺 Ancient Egypt Tour</h2>
+      <p><strong>Highlights:</strong> Pyramids of Giza, Luxor Temples, Nile Cruise</p>
+      <p><strong>Duration:</strong> 7 Days / 6 Nights</p>
+      <p><strong>Price From:</strong> $1,499 USD</p>
+      <button onclick="openBookingForm('Ancient Egypt')">Continue</button>
+    </section>
+
+    <section id="mesopotamia" class="tour-section">
+      <h2>🌾 Mesopotamia Tour (Iraq)</h2>
+      <p><strong>Highlights:</strong> Babylon, Ziggurat of Ur, Baghdad Museum</p>
+      <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
+      <p><strong>Price From:</strong> $1,299 USD</p>
+      <button onclick="openBookingForm('Mesopotamia')">Continue</button>
+    </section>
+
+    <section id="indus" class="tour-section">
+      <h2>🏛 Indus Valley Tour (Pakistan)</h2>
+      <p><strong>Highlights:</strong> Mohenjo-daro, Harappa, National Museum</p>
+      <p><strong>Duration:</strong> 6 Days / 5 Nights</p>
+      <p><strong>Price From:</strong> $1,199 USD</p>
+      <button onclick="openBookingForm('Indus Valley')">Continue</button>
+    </section>
+
+    <section id="china" class="tour-section">
+      <h2>🐉 Ancient China Tour</h2>
+      <p><strong>Highlights:</strong> Terracotta Army, Great Wall, Forbidden City</p>
+      <p><strong>Duration:</strong> 8 Days / 7 Nights</p>
+      <p><strong>Price From:</strong> $1,699 USD</p>
+      <button onclick="openBookingForm('Ancient China')">Continue</button>
+    </section>
+
+    <section id="maya" class="tour-section">
+      <h2>🌴 Maya Civilization Tour (Mexico & Guatemala)</h2>
+      <p><strong>Highlights:</strong> Chichen Itza, Tikal, Palenque</p>
+      <p><strong>Duration:</strong> 7 Days / 6 Nights</p>
+      <p><strong>Price From:</strong> $1,399 USD</p>
+      <button onclick="openBookingForm('Maya Civilization')">Continue</button>
+    </section>
+  </main>
+
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeBookingForm()">&times;</span>
+      <h3>Book Your Tour</h3>
+      <form id="bookingForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <input type="number" id="travelers" placeholder="Number of Travelers" min="1" required />
+
+        <select id="package" required>
+          <option value="">Select Package</option>
+          <option value="Standard">Standard - Basic amenities</option>
+          <option value="Premium">Premium - Extra comfort & better hotels</option>
+          <option value="Deluxe">Deluxe - All inclusive with luxury options</option>
+        </select>
+
+        <select id="paymentMethod" required>
+          <option value="">Select Payment Method</option>
+          <option value="credit-card">Credit Card</option>
+          <option value="paypal">PayPal</option>
+          <option value="bank-transfer">Bank Transfer</option>
+        </select>
+
+        <input type="text" id="destination" readonly />
+        <button type="submit">Submit Booking</button>
+        <p id="bookingSuccess" style="color: green; display: none;">Booking submitted successfully!</p>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Ancient Civilizations Explorer | Travel Curated by HistoryNerds
+  </footer>
+
+  <script>
+    function openBookingForm(destination) {
+      document.getElementById('destination').value = destination;
+      document.getElementById('bookingModal').style.display = 'block';
+    }
+
+    function closeBookingForm() {
+      document.getElementById('bookingModal').style.display = 'none';
+      document.getElementById('bookingForm').reset();
+      document.getElementById('bookingSuccess').style.display = 'none';
+    }
+
+    document.getElementById('bookingForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      document.getElementById('bookingSuccess').style.display = 'block';
+    });
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('bookingModal');
+      if (event.target === modal) {
+        closeBookingForm();
+      }
+    };
+  </script>
+</body>
+</html>
